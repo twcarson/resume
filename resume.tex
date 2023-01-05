@@ -1,0 +1,161 @@
+\documentclass[]{article}
+    \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \usepackage{hyperref}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \usepackage[margin=1in]{geometry}
+    \textheight=10in
+    \pagestyle{empty}
+    \raggedright
+
+%\renewcommand{\encodingdefault}{cg}
+%\renewcommand{\rmdefault}{lgrcmr}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+    \begin{document}
+\vspace*{-40pt}
+
+    
+
+%==== Profile ====%
+\vspace*{-10pt}
+\begin{center}
+	{\Huge \scshape {Tyler W. Carson}}\\
+	$\ $Los Angeles, CA $\ \cdot\ $ tyler.w.carson@gmail.com $\ \cdot\ $ (909) 756-5942\\ linkedin.com/in/twcarson $\ \cdot\ $ github.com/yzgncx\\
+\end{center}
+
+%==== Education ====%
+\header{Education}
+\textbf{University of California, Los Angeles}\hfill Los Angeles, CA\\
+M.A. Linguistics \hspace*{36mm} \textit{GPA: 4.00} \hfill Sep 2018 - Jun 2019\\
+\vspace{1mm}
+B.A. Linguistics and Computer Science \hspace*{1mm} \textit{GPA: 3.69} \hfill Sep 2015 - Jun 2019\\
+\vspace{1mm}
+\textbf{Crafton Hills College}\hfill Yucaipa, CA\\
+A.A. Japanese Language and Culture \hspace*{3.8mm} \textit{GPA: 3.91} \hfill Sep 2013 - Jun 2015\\
+\vspace{1mm}
+
+\header{Coursework}
+Phonetics $\cdot$ Phonology $\cdot$ Syntax $\cdot$ Semantics $\cdot$ Computational Linguistics $\cdot$ Programming Languages $\cdot$ Formal Languages \& Automata Theory $\cdot$ Algorithms $\cdot$ Mathematical Structures in Language
+\vspace*{2mm}
+
+
+%==== Experience ====%
+\header{Experience}
+\vspace{1mm}
+
+\textbf{UCLA Linguistics} \hfill Los Angeles\\
+\textit{Undergraduate Researcher} \hfill Jul 2017 - Oct 2018\\
+\vspace{-3mm}
+\begin{itemize} \itemsep 0pt
+	\item Conducted research on the relationship between surprisal and entropy reduction as measures of complexity for natural language.
+	\item Developed software in OCaml for calculating the complexity of grammar in natural language sentences using concepts based in information-theory.
+	\item Contributed code for calculating the entropy of a probabilistic formal grammar.
+\end{itemize}
+
+\header{Projects}
+{\textbf{Analysis of Uyghur Vowel Harmony}} \hspace*{5mm} {\sl PRAAT, Python, Excel}
+\vspace*{-5pt}\begin{itemize}	\itemsep 0pt 
+	\item Measured phonetic qualities of consultant-provided audio data using PRAAT.
+	\item Performed corpus study of written Uyghur analyzing properties of backenss harmony.
+\end{itemize}
+\vspace*{0mm}
+
+{\textbf{Web Scraper for Corpus Work}} \hspace*{5mm} {\sl Python, Scrapy, Tkinter}
+\vspace*{-5pt}\begin{itemize}	\itemsep 0pt 
+	\item Built web scraper using Python's Scrapy module to generate a corpus of written Uyghur.
+	\item Implemented corpus data processing tools including regex search tool and Arabic/Latin transliterator.
+\end{itemize}
+\vspace*{0mm}
+
+
+{\textbf{Part of Speech Tagger}} \hspace*{5mm} {\sl Python, NLTK} \\
+\vspace*{-5pt}\begin{itemize}	\itemsep 0pt
+	\item Developed a part of speech tagger for untagged corpora using Python Natural Language Tool-Kit.
+	\item Model training was done using the open-source maximum entropy algorithm MegaM.
+\end{itemize}
+\vspace*{0mm}
+{\textbf{Text Based / Rogue-Like RPG}} \hspace*{5mm} {\sl C++, NCurses} \\
+\vspace*{-5pt}\begin{itemize}	\itemsep 0pt
+	\item Designed and implemented a game-engine for a terminal-based RPG using C++ and nCurses library.
+\end{itemize}
+\vspace*{0mm}
+
+\header{Skills}
+\begin{tabular}{ l p{11.2cm} }
+	Tools / Environments:  & PRAAT, Audacity, Git, UNIX, \LaTeX, Excel, Google Docs
+	\\
+	Programming Languages: & C, C++, Python, Bash, OCaml, Haskell
+	\\
+	Natural Languages:     & English \hfill (fluent, native) \newline German \hfill (working proficiency) \newline Japanese \hfill (elementary proficiency) \newline Swedish \hfill (elementary proficiency)
+	\\
+\end{tabular}
+\vspace{2mm}
+
+\header{Honors and Awards}
+\textbf{UCLA Linguistics Departmental Scholar}\\
+Selected by UCLA Linguistics Faculty to complete 1-year master’s program. \hfill Spring 2018\\
+\vspace*{1mm}
+\textbf{UCLA Honors Summer Research Stipend} \hfill Summer 2018\\
+\vspace*{1mm}
+\textbf{UCLA College Honors Program}
+\hfill Fall 2015 - Present\\
+\vspace*{1mm}
+\textbf{Crafton Hills College - Honors College Graduate}
+\hfill Spring 2015\\
+\vspace*{1mm}
+\end{document}
