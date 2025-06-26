@@ -1,0 +1,171 @@
+\documentclass[]{article}
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{textcomp}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1in]{geometry}
+\textheight=10in
+\pagestyle{empty}
+\raggedright
+
+%\renewcommand{\encodingdefault}{cg}
+%\renewcommand{\rmdefault}{lgrcmr}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+	\vspace*{-9pt}
+	\begin{verse}
+		\textbf{#1}   #2
+	\end{verse}
+}
+
+\newcommand{\lineunder} {
+	\vspace*{-8pt} \\
+	\hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+	{\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+	\vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+	{ \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+	\vspace*{-10pt}
+	\begin{center}
+		{\Huge \scshape {#1}}\\
+		#2 \\ #3
+	\end{center}
+	\vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+	\begin{list}
+		{$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+	\end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+	\textbf{#1} #2 $\bullet$ #3\\
+	#4 \\
+	\vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+	\textbf{#1} #2 $\bullet$ #3\\
+	#4 \\
+}
+% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+	\vspace*{-40pt}
+	
+	
+	%==== Profile ====% 
+	\vspace*{-10pt}
+	\begin{center}
+		{\Huge \scshape {Tyler W. Carson}}\\
+		$\ $San Jose, CA $\ \cdot\ $ tyler.w.carson@gmail.com $\ \cdot\ $ (909) 756-5942\\ linkedin.com/in/twcarson $\ \cdot\ $ github.com/yzgncx\\
+	\end{center}
+	
+	
+	%==== Work Experience ====%
+	\header{Work Experience}
+	\vspace{1mm}
+	
+	\textbf{Sensory, Inc.} \hfill Portland, OR (remote)\\
+	\textit{Product Linguist} \hfill May 2023 - May 2025\\
+	\vspace{-3mm}
+	\begin{itemize} \itemsep 0pt
+		\item Created, documented, and maintained internal software tools written in Python and Bash.
+		\item Trained and tested artificial neural networks built for wake word and command recognition, for major automotive and consumer electronics companies.
+		\item Applied linguistic and phonetic expertise and research methods to analyze speech spectrograms and curate audio datasets.
+		\item Used research methods to find optimal model parameters and best practices for data curation.
+		\item Balanced the work of several simultaneous projects with tight deadlines.
+	\end{itemize}
+	
+	\textbf{SoundHound, Inc.} \hfill Santa Clara, CA\\
+	\textit{Linguistic Engineer} \hfill Aug 2021 - Jan 2023\\
+	\vspace{-3mm}
+	\begin{itemize} \itemsep 0pt
+		\item Created experimental and production acoustic models for several languages, often delivering models on tight time-frames.  Produced scripts to automate and streamline multi-step training processes.
+		\item Lead meetings and coordinated presentations for a team of engineers and linguists.
+		\item Worked in a small team to port a legacy repository from C to Python. 
+	\end{itemize}
+	\textit{Language Data Specialist} \hfill Mar 2020 - Aug 2021\\
+	\vspace{-3mm}
+	\begin{itemize} \itemsep 0pt
+		\item Trained and debugged acoustic models and language models for automatic speech recognition.  
+		\item Developed and maintained internal company tools, including a web tool for audio data collection (Javascript, HTML) and audio corpus database for speech models (MySQL, Python).
+	\end{itemize}
+	\textit{English Data Intern} \hfill Aug 2019 - Mar 2020\\
+	\vspace{-3mm}
+	\begin{itemize} \itemsep 0pt
+		\item Curated text and audio data, lead scripting lessons and office hours, and developed tools in Python for scraping and conditioning text data for use in a linguistic corpus.
+	\end{itemize}
+	\vspace{1mm}
+	
+	\textbf{UCLA Linguistics} \hfill Los Angeles, CA\\
+	\textit{Undergraduate Researcher} \hfill Jul 2017 - Oct 2018\\
+	\vspace{-3mm}
+	\begin{itemize} \itemsep 0pt
+		\item Developed software in OCaml for calculating the complexity of grammar in natural language sentences using concepts based in information-theory.
+	\end{itemize}
+	
+	\header{Projects}
+	{\textbf{Analysis of Uyghur Vowel Harmony}} \hspace*{5mm} {\sl PRAAT, Python, Excel}
+	\vspace*{-5pt}\begin{itemize}	\itemsep 0pt 
+		\item Measured phonetic qualities of consultant-provided audio data using PRAAT.
+		\item Performed corpus study of written Uyghur analyzing properties of backenss harmony.
+	\end{itemize}
+	\vspace*{0mm}
+	
+	{\textbf{Web Scraper for Corpus Work}} \hspace*{5mm} {\sl Python, Scrapy, Tkinter}
+	\vspace*{-5pt}\begin{itemize}	\itemsep 0pt 
+		\item Constructed a web scraper using Python's Scrapy module to generate a corpus of written Uyghur.
+		\item Implemented corpus data processing tools including regex search tool and Arabic/Latin transliterator.
+	\end{itemize}
+	\vspace*{0mm}
+	
+	{\textbf{Part of Speech Tagger}} \hspace*{5mm} {\sl Python, NLTK} \\
+	\vspace*{-5pt}\begin{itemize}	\itemsep 0pt
+		\item Developed a part of speech tagger for untagged corpora using Python Natural Language Tool-Kit.
+		\item Model training used the open-source maximum entropy algorithm MegaM.
+	\end{itemize}
+	\vspace*{0mm}
+	
+	\header{Skills}
+	\begin{tabular}{ l p{11.2cm} }
+		Tools / Environments:  & Git, UNIX, Jira, Docker, Google Workspace, Audacity, Excel, \LaTeX
+		\\
+		Programming Languages: & Python, Bash, SQL, C, C++
+		\\
+		Natural Languages:     & English \hfill (fluent, native) \newline German, Spanish \hfill (basic proficiency)
+		\\
+	\end{tabular}
+	\vspace{2mm}
+	
+	
+	%==== Education ====%
+	\header{Education}
+	\textbf{University of California, Los Angeles}\hfill Los Angeles, CA\\
+	M.A. Linguistics \hfill Sep 2018 - Jun 2019\\
+	\vspace{1mm}
+	B.A. Linguistics and Computer Science \hfill Sep 2015 - Jun 2019\\
+	\vspace{1mm}
+	\vspace{1mm}
+	
+	\header{Coursework}
+	Phonetics $\cdot$ Phonology $\cdot$ Syntax $\cdot$ Semantics $\cdot$ Computational Linguistics $\cdot$ Programming Languages $\cdot$ Formal Languages \& Automata Theory $\cdot$ Algorithms $\cdot$ Mathematical Structures in Language
+	\vspace*{10mm}
+	
+\end{document}
